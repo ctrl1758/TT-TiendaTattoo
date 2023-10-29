@@ -1,0 +1,167 @@
+.grid-container {
+    border-bottom: solid;
+    border-color: #ebc4c3;
+    /* border: solid; */
+    margin-top: 0rem;
+    margin-right: 5rem;
+    display: grid;
+    grid-template-columns: 30vw 20vw 15vw 15vw 0vw;
+    grid-gap: 20px;
+    width: 100%;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.inicio-carrito {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+a {
+    color: black;
+    /* text-decoration: none; */
+}
+
+#container-carrito{
+    background: radial-gradient(rgb(104 108 46), #121e0b);
+    color: #ffffffc7;
+    height: 100vh;
+}
+
+
+.container-carrito {
+    border-bottom: solid;
+    border-color: #ebc4c3;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+}
+
+.title-product-img-carrito {
+    display: flex;
+    justify-content: flex-start;
+    height: 14vh;
+    align-items: center;
+}
+
+.img-product-carrito {
+    max-width: 10vh;
+    max-height: 10vh;
+}
+
+.info-item-carrito{
+    display: flex;
+    padding-left: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item-menos{
+    border: solid;
+    color: #080807;
+    border-color: #ebc4c3;
+    padding: 10px;
+}
+
+.item-cantidad {
+    border-top: solid;
+    border-bottom: solid;
+    color: #080807;
+    border-color: #ebc4c3;
+    padding:10px ;
+}
+
+.item-mas {
+    border: solid;
+    color: #080807;
+    border-color: #ebc4c3;
+    padding: 10px;
+}
+
+
+.title-product-trash span {
+    display: none;
+}
+
+#cantidad-mobile {
+    display: none;
+}
+
+.botones a {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.botones {
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.botones button {
+    width: 25%;
+    background-color: #8bc34a;
+    border: solid;
+    border-color: black;
+
+}
+
+.grid-item{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+    .info-item-carrito {
+        height: 100%;
+    }
+    .grid-item {
+        display: block;
+        width: 100%;
+    }
+
+    .botones button {
+    width: 100%;
+    }
+    .inicio-carrito {
+    margin-left: 1rem;
+    }
+    .encabezado {
+            display: none;
+        }
+    .grid-container {
+        grid-template-columns: 50vw 40vw 0vw 0vw 0vw;
+        grid-gap: 10px;
+        margin-left: 0rem;
+    }
+    #cantidad-desktop {
+        display: none;
+    }
+    #cantidad-mobile {
+        display: flex;
+    }
+    .title-product-trash {
+        height: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: end;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+        
+    .title-product-trash span {
+        display: block;
+    }
+    .container-carrito {
+    border-top: solid;
+    height: 70vh;
+    }
+}

@@ -1,0 +1,23 @@
+.slick-slide img {
+    display: block;
+    height: 30vh;
+}
+
+#slick-intereses{
+    background: #e2e8f0;
+    /* margin-top: 45px; */
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
+}
+
+.slider-responsive{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+
+@media screen and (max-width: 769px) {
+    .slider-responsive {
+        padding: 0;
+    }
+}

@@ -1,0 +1,57 @@
+@media only screen and (min-width: 600px)  {
+    #lista-productos{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+.img-product {
+    display: flex;
+    height: 40vh;
+    /* margin: 5px; */
+    /* width: 40%; */
+    align-items: center;
+}
+
+.card-img-top{
+    max-height: 40vh;
+}
+
+.card-titulo {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.card-precio {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.card-body button {
+    --bs-btn-font-size: 12px;
+}
+
+.SliderCategorias{
+        display: none;
+    }
+
+.ItemSliderCategorias{
+    border: solid;
+        border-color: #000000;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #eac7c0;
+}
+
+@media only screen and (max-width: 767px)  {
+    .SliderCategorias{
+        display: block;
+    }
+    .img-product{
+        height: 25vh;
+    }
+    .card-img-top {
+        max-height: 25vh;
+    }
+}

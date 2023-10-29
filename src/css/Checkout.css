@@ -1,0 +1,58 @@
+.FormStep{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    
+}
+input#filled-basic {
+    color: white;
+}
+
+.botonesCheckout{
+    width: 100%;
+    display: flex;
+}
+
+.formCheckout{
+    display: flex;
+    height: 50vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formStyle{
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    background: rgb(255 255 255 / 36%);
+    border-radius: 15px;
+}
+#filled-basic-label{
+        color: rgb(255 255 255 / 60%);
+}
+
+span.MuiStepLabel-labelContainer.css-1vyamtt-MuiStepLabel-labelContainer {
+    color: white;
+}
+
+span.MuiStepLabel-label.Mui-active.css-1hv8oq8-MuiStepLabel-label {
+    background: #e9474780;
+    color: white;
+}
+
+span.MuiStepLabel-label.Mui-completed.css-1hv8oq8-MuiStepLabel-label{
+    color: white;
+}
+
+@media screen and (max-width: 769px) {
+    .formCheckout{
+        width: 100%;
+    }
+    .TableCheckout{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

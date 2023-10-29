@@ -1,0 +1,105 @@
+
+@font-face {
+    font-family: "FuenteLogo";
+    src: url("../font/CantaraGotica.ttf");
+}
+
+#sectionHero {
+    height: 160vh;
+}
+
+.container-tattoo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container-tattoo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+}
+
+.baner {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#baner1 {
+    background-image: url("https://media.istockphoto.com/id/154200278/vector/skulls-and-roses-background.jpg?s=612x612&w=0&k=20&c=tpH7mB1lQs47BceF61t0oXrR_3QWkmzFIwQRNVcliJw=");
+}
+
+#baner2 {
+    background-image: url("https://img.freepik.com/premium-vector/vintage-traditional-tattoo-biker-seamless-pattern-vector-illustration_147066-356.jpg");
+}
+
+#baner3 {
+    background-image: url("https://cdn.vectorstock.com/i/1000x1000/41/03/color-seamless-background-on-tattoo-theme-vector-38894103.webp");
+}
+
+.overlay {
+    color: #ff0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2000;
+}
+
+.title {
+    font-size: 3rem;
+    text-shadow: #000000 2px 5px;
+    text-align: center;
+    padding-Bottom: 12px;
+    font-family: 'fat_wandals_personal_useRg', Arial, sans-serif;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    text-shadow: #d3de6a 2px 5px;
+    text-align: center;
+    padding-Bottom: 32px;
+    font-family: 'fat_wandals_personal_useRg', Arial, sans-serif;
+    color: #000000;
+
+}
+
+.container-titulos{
+    padding: 1rem;
+    padding-top: 4rem;
+
+}
+
+.novedades-tattoo{
+    margin-top: 3rem;
+    background: #151716;
+}
+
+
+.encabezado-galeria{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background: #151716;
+}
+@media screen and (max-width: 769px) {
+    .title{
+        font-size: 2rem;
+    }
+    .sub-title {
+        font-size: 1.5rem;
+        
+    }
+}
