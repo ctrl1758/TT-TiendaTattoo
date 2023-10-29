@@ -28,3 +28,5 @@ public
 .eslintrc.cjs
 tailwind.config.js
 postcss.config.js
+
+firebase.js
