@@ -135,7 +135,7 @@ function ResponsiveAppBar({ currentPage }) {
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              nosotros
+              arte
             </Button>
           </Box>
           <Typography

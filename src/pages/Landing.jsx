@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import "../css/Landing.css";
-import HeroOverlay from "../components/heroOverlay";
+import HeroOverlay from "../components/HeroOverlay";
 import { Container } from "@mui/material";
 import ChangeCircleOutlinedIcon from "@mui/icons-material/ChangeCircleOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -21,9 +21,9 @@ export default function Landing() {
     <>
       <ResponsiveAppBar currentPage={"landing"} />
       <HeroOverlay />
-      <SliderProduct nombreCategoria={"parafernaria"} />
+      <SliderProduct nombreCategoria={"grow"} />
       <SliderNovedades />
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           paddingTop: "10rem",
@@ -69,7 +69,7 @@ export default function Landing() {
             style={{ width: "4rem", borderRadius: "30px", marginLeft: "20px" }}
           />
         </div>
-      </Box>
+      </Box> */}
       <BannerCategoria />
       <div
         className="container-fluid"

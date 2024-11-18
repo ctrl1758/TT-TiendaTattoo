@@ -5,7 +5,10 @@
 }
 
 #sectionHero {
-    height: 160vh;
+    background-image: url('../assets/dofon.jpg');
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .container-tattoo{
@@ -45,17 +48,7 @@
 }
 
 .overlay {
-    color: #ff0000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 2000;
+   margin-bottom: 4rem
 }
 
 .title {
@@ -64,6 +57,13 @@
     text-align: center;
     padding-Bottom: 12px;
     font-family: 'fat_wandals_personal_useRg', Arial, sans-serif;
+}
+
+.title-tattoo {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    animation: glow 1.5s infinite alternate;
 }
 
 .sub-title {
@@ -76,6 +76,12 @@
 
 }
 
+.subtitle-tattoo {
+    display: inline-block;
+    font-size: 24px;
+    animation: wave 2s infinite;
+}
+
 .container-titulos{
     padding: 1rem;
     padding-top: 4rem;
@@ -86,14 +92,43 @@
     margin-top: 3rem;
     background: #151716;
 }
+.row-estudio {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #151716;
+    border-radius: 35px;
+}
 
+.row-hero {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: #151716eb;;
+    border-radius: 35px;
+}
 
+.responsive-estudio {
+    height: 40vh;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.fixed-height-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
 .encabezado-galeria{
     padding-bottom: 30px;
     padding-top: 30px;
     text-align: center;
     background: #151716;
 }
+
 @media screen and (max-width: 769px) {
     .title{
         font-size: 2rem;
@@ -102,4 +137,19 @@
         font-size: 1.5rem;
         
     }
+
+    .responsive-estudio {
+        height: 50vh;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding: .5rem;
+    }
+
+    .row-estudio {
+        padding: 0;
+        border-radius: 0%;
+    }
+
+    .row-hero {display: flex;
+        flex-direction: column-reverse;}
 }

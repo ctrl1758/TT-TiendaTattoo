@@ -5,37 +5,75 @@ import Carrusel from "./CarruselAuto";
 import { motion } from "framer-motion";
 import SimpleSlider from "./SliderTattoos";
 import SliderNovedades from "./SliderNovedades";
+import frenteImg from "../assets/frente.jpg";
+import sanJuan2023Img from "../assets/SanJuan2023.jpg";
+import frente2Img from "../assets/frente2.jpg";
+import banner from "../assets/banner.jpg";
+
+// Importamos la fuente FuenteLogo
+import "../font/CantaraGotica.ttf";
 
 export default function HeroOverlay() {
   return (
     <section id="sectionHero">
-      <Carrusel />
+      {/* <Carrusel /> */}
       <div className="overlay">
-        <div className="d-flex container-titulos flex-column">
-          <motion.h5
-            className="title headline"
+        {/* <div className="d-flex container-titulos flex-column">
+          <h5
+            className="title headline title-tattoo"
             style={{ fontFamily: "FuenteLogo" }}
-            animate={{
-              scale: [1, 1.5, 1.5, 0, 1],
-              rotate: [0, 0, 0, 360, 0],
-              borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: Infinity,
-              repeatDelay: 2,
-            }}
           >
             German Sirio Tattoo
-          </motion.h5>
+          </h5>
           <h5
-            className="sub-title headline"
+            className="sub-title headline subtitle-tattoo"
             style={{ fontFamily: "FuenteLogo" }}
           >
-            Estudio Tattoo & Piercing
+            Estudio Tattoo &amp; Piercing
           </h5>
+        </div> */}
+
+        <div class="container">
+          <div class="row  row-hero ">
+            <div class="col-md-8 d-flex justify-content-center " style={{height: "90vh"}}>
+              <img src={banner} class="" style={{height: "100%"}} alt="Imagen 1" />
+            </div>
+            <div class="col-md-4 ">
+            <div className="d-flex container-titulos flex-column justify-content-around h-100">
+          <h5
+            className="title headline title-tattoo"
+            style={{ fontFamily: "FuenteLogo" }}
+          >
+            German Sirio Tattoo
+          </h5>
+          <h5
+            className="sub-title headline subtitle-tattoo"
+            style={{ fontFamily: "FuenteLogo" }}
+          >
+            Estudio Tattoo &amp; Piercing
+          </h5>
+        </div>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class="container">
+          <div class="row  row-estudio ">
+            <div class="col responsive-estudio">
+              <img src={frenteImg} class="fixed-height-image" alt="Imagen 1" />
+            </div>
+            <div class="col responsive-estudio">
+              <img
+                src={sanJuan2023Img}
+                class="fixed-height-image"
+                alt="Imagen 2"
+              />
+            </div>
+            <div class="col responsive-estudio">
+              <img src={frente2Img} class="fixed-height-image" alt="Imagen 3" />
+            </div>
+          </div>
         </div>
         <div className="novedades-tattoo container">
           <SimpleSlider />

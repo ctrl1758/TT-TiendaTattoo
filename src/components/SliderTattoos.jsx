@@ -1,34 +1,32 @@
-import React, { Component } from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "../css/heroOverlay.css";
-import dofon from "../assets/dofon.jpg";
 import CustomSlide from "../components/CustomSlide";
-import { collection, db, query, orderBy, limit, getDocs } from "../firebase.js";
+import { collection, db, query, getDocs } from "../firebase.js";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function SimpleSlider() {
   const [tattoosNovedades, setTattoosNovedades] = useState([]);
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   async function sliderNovedades() {
     const novedadesRef = await collection(db, "galeria");
-    const q = await query(
-      novedadesRef,
-      orderBy("dateAddMod", "desc"),
-      limit(16)
-    );
-    console.log("novedades", q);
+    const q = await query(novedadesRef);
     const querySnapshot = await getDocs(q);
     const dataArray = [];
     querySnapshot.forEach((doc) => {
-      // doc.data() contiene los datos del documento
       dataArray.push({ ...doc.data(), id: doc.id });
     });
-    setTattoosNovedades(dataArray);
+    // Mezclar el array de forma aleatoria
+    const shuffledArray = dataArray.sort(() => 0.5 - Math.random());
+    // Tomar los primeros 15 elementos
+    setTattoosNovedades(shuffledArray.slice(0, 15));
   }
+
   useEffect(() => {
     sliderNovedades();
-    console.log(tattoosNovedades);
   }, []);
 
   const settings = {
@@ -64,6 +62,47 @@ export default function SimpleSlider() {
       },
     ],
   };
+
+  const CustomSlideWithHover = ({ tattoo, index }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={{ position: 'relative' }}
+      >
+        <div style={{ 
+          filter: isHovered ? 'brightness(0.7)' : 'none',
+          transition: 'filter 0.3s ease-in-out'
+        }}>
+          <CustomSlide index={index} tattoo={tattoo} />
+        </div>
+        <Button
+          variant="contained"
+          style={{
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            padding: '5px 15px',
+            backgroundColor: '#c4d364',
+            color: 'rgb(21, 23, 22)',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            opacity: isMobile || isHovered ? 1 : 0,
+            transition: 'opacity .3s',
+            fontFamily: "FuenteLogo",
+            fontSize: '1.5rem',
+            textTransform: 'capitalize',
+          }}
+        >
+          Consultar
+        </Button>
+      </div>
+    );
+  };
+
   return (
     <div style={{ borderRadius: "21px" }}>
       <div className="encabezado-galeria">
@@ -85,7 +124,7 @@ export default function SimpleSlider() {
       </div>
       <Slider {...settings}>
         {tattoosNovedades.map((tattoo, index) => (
-          <CustomSlide index={index} key={index} tattoo={tattoo} />
+          <CustomSlideWithHover key={index} tattoo={tattoo} index={index} />
         ))}
       </Slider>
     </div>
